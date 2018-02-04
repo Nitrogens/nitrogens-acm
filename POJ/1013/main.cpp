@@ -30,6 +30,7 @@ int main(void)
 				switch(status[k][0])
 				{
 					case 'u':
+						//天平右侧没有所假设的硬币的话，假设不成立
 						if(strchr(right[k], j) == NULL)
 						{
 							/* 
@@ -40,12 +41,14 @@ int main(void)
 						}
 						break;
 					case 'd':
+						//天平左侧没有所假设的硬币的话，假设不成立
 						if(strchr(left[k], j) == NULL)
 						{
 							k = 4;
 						}
 						break;
 					case 'e':
+						//平衡时，两侧都不应该有所假设的硬币，否则假设不成立 
 						if(strchr(left[k], j) || strchr(right[k], j))
 						{
 							k = 4;
