@@ -16,7 +16,7 @@ int main(void)
 		while(number % i == 0)	number /= i;
 	}
 	
-	//可证明number的余量一定是素数 
+	//可证明余下的number一定是素数 
 	if(number > result)	result = number;
 	
 	printf("%d\n", result);
